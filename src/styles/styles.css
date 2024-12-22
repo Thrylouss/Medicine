@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+
+:root {
+    --primary-color: #6612d2; /* Основной цвет */
+    --secondary-color: #a73afd; /* Второстепенный цвет */
+    --background-color: #f4f4f4; /* Цвет фона */
+    --text-color: #9d9da5; /* Цвет текста */
+    --accent-color: #e74c3c; /* Акцентный цвет */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+.wrapper-container {
+    max-width: 1500px;
+    min-width: 320px;
+    width: 100%;
+    padding: 0 24px;
+    margin: 20px auto;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.header-wrapper{
+    background-color: var(--primary-color);
+}

@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+    min-width: 320px;
+    position: relative;
+    z-index: 101;
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100%; /* Покрывает всю ширину */
+    height: 100%; /* Высота экрана минус отступ сверху */
+    z-index: 100; /* Чтобы элемент был над другими */
+}
+
+.container box-icon:hover {
+    transform: scale(1.1);
+}
+
+.asideLeft {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 40px;
+}
+
+.asideLeft box-icon {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    transition: ease-out 0.3s;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.asideCenter {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.asideCenter input {
+    width: 90%;
+    border: none;
+    height: 60px;
+    background: none;
+    outline: none;
+    border-right: 1px solid #c8c8d1;
+    padding-left: 15px;
+    font-size: 20px;;
+}
+
+.asideCenter box-icon {
+    cursor: pointer;
+    width: 10%;
+    height: 35px;
+}
+
+.asideRight {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 60px;
+}
+
+.asideRight box-icon {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    transition: ease-out 0.3s;
+}
+
+.logo {
+    width: 150px;
+}
+
+
+/* Adaptation */
+
+@media (max-width: 1400px) {
+    .logo {
+        width: 130px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        width: 100px;
+    }
+    .asideRight {
+        gap: 20px;
+    }
+
+    .asideLeft box-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .asideCenter input {
+        height: 50px;
+    }
+
+    .asideLeft {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 770px) {
+    .logo {
+        display: none;
+    }
+
+    .asideRight {
+        display: none;
+    }
+
+    .asideRight box-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .asideLeft box-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .asideCenter {
+        width: 85%;
+        border-radius: 15px;
+    }
+
+    .asideCenter input {
+        height: 40px;
+    }
+
+    .asideLeft {
+        width: 15%;
+        min-width: 70px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .asideLeft {}
+
+    .logo {
+        width: 50px;
+    }
+
+}

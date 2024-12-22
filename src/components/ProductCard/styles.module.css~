@@ -1,0 +1,79 @@
+.container {
+    flex: 1 1 calc(16% - 16px); /* Ширина элемента: 25% (1/4 строки) */
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+    /*width: 100px;*/
+    flex-basis: 24%;
+
+}
+
+.itemImage {
+    max-width: 100%;
+
+}
+
+.itemLike {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.itemPrice {
+    font-size: 20px;
+}
+
+.itemInfoProduct {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Обязательно, чтобы предотвратить перенос */
+    width: 100%; /* Убедитесь, что есть ограничение ширины */
+}
+
+.itemInfoProduct p {
+    display: inline-block;
+    overflow: hidden; /* Скрытие текста за пределами контейнера */
+    text-overflow: ellipsis; /* Добавление троеточия */
+    word-break: break-all;
+}
+
+.itemGrey {
+    color: var(--text-color);
+}
+
+
+.itemLike box-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/*Adaptation*/
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-basis: 32%;
+    }
+}
+
+@media (max-width: 770px) {
+    .container {
+        flex-basis: calc(50% -16px);
+    }
+}

@@ -1,0 +1,16 @@
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься */
+    gap: 16px; /* Расстояние между элементами */
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container::after {
+    content: "";
+    flex: auto; /* Растяжение пустого места */
+}
