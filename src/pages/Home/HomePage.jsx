@@ -19,8 +19,8 @@ export default function HomePage() {
             liked: false,
             image: image1,
             rating: 5.0,
-            rateCount: 10
-
+            rateCount: 10,
+            discount: 62,
         },
         {
             id: 2,
@@ -30,7 +30,8 @@ export default function HomePage() {
             liked: false,
             image: image2,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 0
         },
         {
             id: 3,
@@ -40,7 +41,8 @@ export default function HomePage() {
             liked: false,
             image: image3,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 45,
         },
         {
             id: 4,
@@ -50,7 +52,8 @@ export default function HomePage() {
             liked: false,
             image: image4,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 25,
         },
         {
             id: 5,
@@ -60,7 +63,8 @@ export default function HomePage() {
             liked: false,
             image: image5,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 0
         },
         {
             id: 6,
@@ -70,7 +74,8 @@ export default function HomePage() {
             liked: false,
             image: image6,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 50,
         },
         {
             id: 7,
@@ -80,7 +85,8 @@ export default function HomePage() {
             liked: false,
             image: image1,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 0,
         },
         {
             id: 8,
@@ -90,7 +96,8 @@ export default function HomePage() {
             liked: false,
             image: image2,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 15,
         },
         {
             id: 9,
@@ -100,7 +107,8 @@ export default function HomePage() {
             liked: false,
             image: image3,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 20,
         },
         {
             id: 10,
@@ -110,7 +118,8 @@ export default function HomePage() {
             liked: false,
             image: image4,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 40,
         },
         {
             id: 11,
@@ -120,7 +129,8 @@ export default function HomePage() {
             liked: false,
             image: image5,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 90,
         },
         {
             id: 12,
@@ -130,7 +140,8 @@ export default function HomePage() {
             liked: false,
             image: image6,
             rating: 5.0,
-            rateCount: 10
+            rateCount: 10,
+            discount: 10,
         },
     ]
 

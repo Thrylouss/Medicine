@@ -1,0 +1,53 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.asideTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.asideTopLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.profileIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    background-color: #dddddd;
+    border-radius: 50%;
+}
+
+.asideCenter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.asideCenterItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: #dddddd;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #292929;
+}

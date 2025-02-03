@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    min-height: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Покрывает всю ширину */
+    height: 100%; /* Высота экрана */
+    z-index: 100; /* Чтобы элемент был над другими */
+}
+
+.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.createForm input {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.createForm button {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 50%;
+    }
+
+    .createForm h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 70%;
+    }
+
+    .createForm h1 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        min-height: auto;
+    }
+
+    .createForm {
+        gap: 15px;
+    }
+
+    .createForm h1 {
+        font-size: 18px;
+    }
+
+    .createForm input {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .createForm button {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .closeBtn {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+    }
+}

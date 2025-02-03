@@ -1,7 +1,9 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import styles from "./styles.module.css";
+import SubSideBar from "../SubSideBar/SubSideBar.jsx";
 
-export default function SideBar({ isOpen }) {
+export default function SideBar({ isOpen, activeCategory, setActiveCategory }) {
+    const [activeItem, setActiveItem] = useState(null);
 
     const items = [
         {
@@ -38,23 +40,23 @@ export default function SideBar({ isOpen }) {
             subcategory: [
                 {
                     id: 1,
-                    title: "Подкатегория 1"
+                    title: "Подкатегория 6"
                 },
                 {
                     id: 2,
-                    title: "Подкатегория 2"
+                    title: "Подкатегория 7"
                 },
                 {
                     id: 3,
-                    title: "Подкатегория 3"
+                    title: "Подкатегория 8"
                 },
                 {
                     id: 4,
-                    title: "Подкатегория 4"
+                    title: "Подкатегория 9"
                 },
                 {
                     id: 5,
-                    title: "Подкатегория 5"
+                    title: "Подкатегория 10"
                 }
             ]
         },
@@ -65,46 +67,61 @@ export default function SideBar({ isOpen }) {
             subcategory: [
                 {
                     id: 1,
-                    title: "Подкатегория 1"
+                    title: "Подкатегория 11"
                 },
                 {
                     id: 2,
-                    title: "Подкатегория 2"
+                    title: "Подкатегория 12"
                 },
                 {
                     id: 3,
-                    title: "Подкатегория 3"
+                    title: "Подкатегория 13"
                 },
                 {
                     id: 4,
-                    title: "Подкатегория 4"
+                    title: "Подкатегория 14"
                 },
                 {
                     id: 5,
-                    title: "Подкатегория 5"
+                    title: "Подкатегория 17"
                 }
             ]
         }
     ]
 
+    useEffect(() => {
+        if (activeCategory) {
+            const activeItem = items.find((item) => item.id === activeCategory);
+            setActiveItem(activeItem);
+        } else {
+            setActiveItem(null);
+        }
+    }, [activeCategory]);
+
     return (
-        <div
-            className={`${styles.sidebar} ${
-                isOpen ? styles.sidebarOpen : ""
-            }`}
-        >
-            <div className={styles.sidebarContent}>
-                <nav>
-                    <ul>
-                        {items.map((item) => (
-                            <li key={item.id}>
-                                <box-icon name={item.icon}></box-icon>
-                                <a href="#">{item.title}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+        <>
+            <div
+                className={`${styles.sidebar} ${
+                    isOpen ? styles.sidebarOpen : ""
+                }`}
+            >
+                <div>
+                    <nav>
+                        <ul>
+                            {items.map((item) => (
+                                <li
+                                    key={item.id}
+                                    onMouseEnter={() => setActiveCategory(item.id)}
+                                >
+                                    <box-icon name={item.icon}></box-icon>
+                                    <a href="#">{item.title}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
+            {activeItem && isOpen && <SubSideBar item={activeItem}  />}
+        </>
     );
 }

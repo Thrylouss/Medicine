@@ -1,18 +1,20 @@
 .container {
-    flex: 1 1 calc(16% - 16px); /* Ширина элемента: 25% (1/4 строки) */
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
+    align-content: flex-start;
     margin-top: 20px;
     position: relative;
     cursor: pointer;
-    /*width: 100px;*/
-    flex-basis: 24%;
-
+    flex-basis: 16%;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    background-color: white;
 }
 
 .itemImage {
+    border-radius: 15px;
     max-width: 100%;
-
 }
 
 .itemLike {
@@ -24,14 +26,26 @@
 .itemInfo {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
     text-align: left;
     width: 100%;
+    height: 100%;
     gap: 5px;
     margin-top: 10px;
+    padding: 0 10px;
 }
 
 .itemPrice {
-    font-size: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    align-content: flex-start;
+}
+
+.itemDiscount {
+    font-size: 15px;
+    text-decoration-line: line-through;
+    color: var(--text-color);
 }
 
 .itemInfoProduct {
@@ -58,22 +72,35 @@
     height: 30px;
 }
 
-
-
-/*Adaptation*/
-
-@media (max-width: 1400px) {
-
+.itemBtn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0;
+    background-color: var(--primary-color);
+    gap: 15px;
+    padding: 7px;
+    border-radius: 10px;
+    color: white;
+    min-height: 40px;
+    z-index: 105;
 }
 
-@media (max-width: 1200px) {
-    .container {
-        flex-basis: 32%;
-    }
-}
-
-@media (max-width: 770px) {
-    .container {
-        flex-basis: calc(50% - 16px);
-    }
+.itemInCart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px auto 0;
+    background-color: var(--light-color);
+    gap: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    min-height: 40px;
 }

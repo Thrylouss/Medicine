@@ -1,10 +1,9 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 import image1 from "../../assets/images/products/1.webp";
 import image2 from "../../assets/images/products/Без названия (1).png";
 import ProductCard from "../../components/ProductCard/ProductCard.jsx";
 
-export default function FavouritePage(){
-
+export default function PurchasesPage() {
     const items = [
         {
             id: 1,
@@ -28,16 +27,28 @@ export default function FavouritePage(){
             rateCount: 10,
             discount: 0
         },
-    ]
+    ];
 
     return (
         <>
             <div className={styles.container}>
-                <h1>Избранное</h1>
+                <h1>Покупки</h1>
+                <div className={styles.purchaseFilter}>
+                    <select defaultValue="">
+                        <option value="" disabled>Выберите способ оплаты</option>
+                        <option value="cash">наличкой</option>
+                        <option value="card">картой</option>
+                        <option value="credit">в долг</option>
+                    </select>
+                    <div>
+                        <input type="text" placeholder="Введите название заказа" />
+                        <box-icon color="#c8c8d1" name="search"></box-icon>
+                    </div>
+                </div>
                 <div className={styles.itemsContainer}>
-                    {items.map(item => <ProductCard key={item.id} item={item}/>)}
+                    {items.map(item => <ProductCard key={item.id} item={item} />)}
                 </div>
             </div>
         </>
-    )
+    );
 }

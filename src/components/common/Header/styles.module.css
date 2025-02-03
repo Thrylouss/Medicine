@@ -1,20 +1,28 @@
 .container {
     display: flex;
     align-items: center;
-    min-height: 120px;
-    min-width: 320px;
-    position: relative;
-    z-index: 101;
+    min-height: 100px;
+    min-width: 300px;
     max-width: 1500px;
     width: 100%;
     margin: 0 auto;
     padding: 0 24px;
+    position: relative;
+    z-index: 200;
+}
+
+.headerWrapper{
+    width: 100%;
+    background-color: var(--primary-color);
+    position: fixed; /* Убедитесь, что хедер имеет контекст стека */
+    z-index: 200; /* Хедер выше */
+    top: 0;
 }
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 120px;
+    top: 100px;
     left: 0;
     width: 100%; /* Покрывает всю ширину */
     height: 100%; /* Высота экрана минус отступ сверху */
@@ -50,7 +58,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .asideCenter input {
@@ -59,7 +67,6 @@
     height: 60px;
     background: none;
     outline: none;
-    border-right: 1px solid #c8c8d1;
     padding-left: 15px;
     font-size: 20px;;
 }
@@ -87,6 +94,7 @@
 
 .logo {
     width: 150px;
+    cursor: pointer;
 }
 
 
@@ -156,10 +164,16 @@
 }
 
 @media (max-width: 480px) {
-    .asideLeft {}
+    .container {
+        padding: 0 24px 0;
+    }
 
-    .logo {
-        width: 50px;
+    .asideCenter {
+        border-radius: 15px;
+    }
+
+    .asideCenter input {
+        padding-right: 15px;
     }
 
 }
