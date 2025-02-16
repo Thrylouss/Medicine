@@ -1,0 +1,27 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.9em;
+}
+
+.checkbox input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.checkbox a {
+    text-decoration: none;
+    color: #737373;
+}
+
+.checkbox a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}

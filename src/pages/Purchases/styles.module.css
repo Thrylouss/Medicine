@@ -1,0 +1,118 @@
+/* Основной контейнер фильтра */
+.purchaseFilter {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(108, 108, 108, 0.34);
+}
+
+/* Стиль для div с select */
+.purchaseFilter div {
+    display: flex;
+    align-items: center;
+}
+
+/* Стиль для select */
+.purchaseFilter select {
+    width: 20%;
+    min-width: 250px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #6c757d; /* Цвет для плейсхолдера */
+    border: 1px solid #c8c8d1;
+    border-radius: 4px;
+    background-color: white;
+    appearance: none;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.purchaseFilter select:focus {
+    border-color: var(--primary-color);
+}
+
+/* Псевдоэлемент для стрелки select */
+.purchaseFilter select::-ms-expand {
+    display: none;
+}
+
+/* Добавление плейсхолдера в select */
+.purchaseFilter select option[value=""] {
+    display: none;
+}
+
+/* Стиль для input */
+.purchaseFilter input[type="text"] {
+    width: 20%;
+    min-width: 250px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #c8c8d1;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.purchaseFilter input[type="text"]:focus {
+    border-color: var(--primary-color);
+}
+
+/* Стиль для иконки */
+.purchaseFilter box-icon {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.purchaseFilter box-icon:hover {
+    color: var(--primary-color);
+}
+
+/* Основной контейнер страницы */
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Сетка товаров */
+.itemsContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px; /* Расстояние между элементами */
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Адаптивность сетки товаров */
+@media (max-width: 1200px) {
+    .purchaseFilter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .itemsContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .itemsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .itemsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,333 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Для адаптивности */
+}
+
+.asideLeft {
+    width: 70%;
+    max-width: 1230px;
+    min-width: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Легкий объем */
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.asideLeftContainer {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.payment {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.error {
+    color: red;
+    
+}
+
+.paymentSection {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    /*background-color: #ffffff;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); !* Легкий объем *!*/
+}
+
+.paymentSection h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.paymentSection p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.paymentChoose {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.paymentAddress {
+    padding: 10px 15px;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Легкий объем */
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cartItemImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Объем для изображения */
+}
+
+.cartItemDetails {
+    flex-grow: 1;
+}
+
+.itemName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.itemInfo {
+    font-size: 14px;
+    color: #666;
+}
+
+.cartItemActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantityBtn {
+    padding: 5px 10px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quantityBtn:hover {
+    background-color: #bbb;
+}
+
+.itemPrice {
+    font-size: 16px;
+    color: #f44;
+    font-weight: bold;
+}
+
+.deleteBtn {
+    background-color: #f44;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.deleteBtn:hover {
+    background-color: #d33;
+}
+
+.recommendations {
+    margin-top: 20px;
+}
+
+.recommendationsList {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Прокрутка для рекомендаций */
+    padding-bottom: 10px;
+}
+
+.recommendationItem {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 100px; /* Ширина каждого элемента */
+}
+
+.recommendationItem img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.asideRight {
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Легкий объем */
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.summary {
+    font-size: 16px;
+    margin-top: 10px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary p,
+.summary h2 {
+    margin: 0;
+    color: #333;
+}
+
+.orderBtn {
+    background-color: #6200ee;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.orderBtn:hover {
+    background-color: #5300d9;
+}
+
+.political {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.political input {
+    margin: 0;
+}
+
+/* --- Адаптация для планшетов --- */
+@media (max-width: 1100px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .asideLeft,
+    .asideRight {
+        width: 100%;
+    }
+
+    .cartItem {
+        flex-wrap: wrap;
+    }
+
+    .cartItemImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    .itemName {
+        font-size: 16px;
+    }
+
+    .itemPrice {
+        font-size: 14px;
+    }
+
+    .orderBtn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .payment {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .paymentSection {
+        padding: 15px;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .paymentSection h2 {
+        font-size: 16px;
+    }
+
+    .paymentSection p {
+        font-size: 14px;
+    }
+
+
+}
+
+/* --- Адаптация для мобильных устройств --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .cartItemImage {
+        width: 70px;
+        height: 70px;
+    }
+
+    .itemName {
+        font-size: 14px;
+    }
+
+    .itemPrice {
+        font-size: 12px;
+    }
+
+    .summary p,
+    .summary h2 {
+        font-size: 14px;
+    }
+
+    .orderBtn {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .political {
+        font-size: 12px;
+    }
+
+    .paymentSection {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .paymentSection h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .paymentSection p {
+        font-size: 12px;
+        text-align: center;
+    }
+}

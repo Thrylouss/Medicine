@@ -1,0 +1,17 @@
+import styles from "./styles.module.css"
+
+export default function Confirmation({ setAgreement, agreement }) {
+
+
+
+    return (
+        <div className={styles.checkbox}>
+            <input
+                type="checkbox"
+                checked={agreement}
+                onChange={(e) => setAgreement(e.target.checked)}
+            />
+            <p>Я согласен с правилами использования</p>
+        </div>
+    )
+}

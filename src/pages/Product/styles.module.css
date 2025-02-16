@@ -1,0 +1,263 @@
+:root {
+    --primary-color: #6200ee;
+    --light-color: #f3f3f3;
+    --text-color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.asideLeft {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productImage {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.imageGallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 20%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+}
+
+.activeThumbnail {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.1);
+}
+
+.asideCenter {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #888;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.gift {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.asideRight {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4444;
+}
+
+.deliveryInfo {
+    font-size: 14px;
+    color: #666;
+}
+
+.addToCartBtn,
+.inCartBtn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.addToCartBtn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.inCartBtn {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+/* Комментарии */
+.commentsSection {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.commentsSection h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.comment {
+    background-color: white;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Объемный эффект */
+    border: 1px solid #e0e0e0; /* Легкая рамка */
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Добавить максимальную ширину для комментариев */
+.comment p {
+    max-width: 100%;
+    word-wrap: break-word; /* Перенос длинных строк */
+}
+
+
+/* --- Адаптация для планшетов --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .asideLeft,
+    .asideCenter,
+    .asideRight {
+        width: 100%;
+    }
+
+    .productImage {
+        width: 80%;
+    }
+
+    .thumbnail {
+        width: 15%;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .commentsSection h2 {
+        font-size: 16px;
+        text-align: center; /* Центрирование заголовка */
+    }
+
+    .comment {
+        padding: 12px 15px; /* Уменьшенные отступы */
+        font-size: 14px; /* Уменьшенный текст */
+    }
+}
+
+/* --- Адаптация для мобильных устройств --- */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .asideLeft,
+    .asideCenter,
+    .asideRight {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .productImage {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .thumbnail {
+        width: 20%;
+    }
+
+    .title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .addToCartBtn,
+    .inCartBtn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .commentsSection h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .comment {
+        padding: 10px;
+        font-size: 12px; /* Еще меньше текст */
+        margin-bottom: 10px;
+        border-radius: 12px; /* Более округлые границы */
+    }
+}

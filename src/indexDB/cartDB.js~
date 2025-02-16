@@ -1,0 +1,21 @@
+import Dexie from 'dexie';
+
+// Создаем экземпляр Dexie и называем базу "CartDB"
+const db = new Dexie('CartDB');
+
+/*
+  Описываем структуру таблиц для двух сущностей:
+  1) cart — для товаров в корзине
+  2) favorites — для избранных товаров
+
+  '++id' означает, что ключ (Primary Key) будет автоинкрементироваться.
+  Далее вы можете указать любые поля, которые необходимы для ваших данных:
+  productId, название товара, цена, количество и т. д.
+*/
+db.version(1).stores({
+    cart: 'productId, quantity, discount',
+    favorites: 'productId, userId',
+});
+
+// Экспортируем базу
+export default db;

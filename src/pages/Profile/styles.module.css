@@ -1,0 +1,143 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    min-width: 300px;
+}
+
+.asideLeft {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.banner img {
+    width: 95%;
+    height: 650px;
+}
+
+.asideRight {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.asideCenter {
+    width: 49%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.asideCenter box-icon {
+    cursor: pointer;
+    min-width: 30px;
+}
+
+.asideTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.asideRecent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.asideRecentContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px; /* Расстояние между элементами */
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.asideTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .banner {
+        width: 70%;
+        max-width: 1230px;
+        min-width: 100px;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+
+    .banner img {
+    }
+
+
+    .asideLeft,
+    .asideRight {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .asideCenter box-icon {
+        display: none;
+    }
+
+    .asideRecentContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .banner {
+        width: 95%;
+    }
+
+    .banner img {
+        height: 400px;
+    }
+}

@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0 ;
+}
+
+.authForm {
+    background-color: #ffffff;
+    padding: 50px 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    min-width: 250px;
+    gap: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+}
+
+.inputField {
+    width: 80%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+    outline: none;
+    background-color: #e1e1e1;
+    color: #000000;
+    font-size: 20px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.checkbox input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.buttonLogin {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    font-size: 25px;
+}
+
+
+
+/* Adaptation */
+
+@media (max-width: 1400px) {
+    .authForm {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .authForm {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .authForm {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        background-color: white;
+    }
+
+    .authForm {
+        width: 100%;
+    }
+
+    .wrapper-container {
+        padding: 0;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .inputField {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .buttonLogin {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
